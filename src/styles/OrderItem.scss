@@ -1,0 +1,27 @@
+@use "vars";
+
+.OrderItem {
+    display: grid;
+    margin-bottom: 12px;
+    padding: 0 24px;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    border-radius: 8px;
+}
+.OrderItem p:first-child {
+    display: flex;
+    flex-direction: column;
+}
+.OrderItem p span:first-child {
+    font-size: var(--md);
+    font-weight: bold;
+}
+.OrderItem p span:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+.OrderItem p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}

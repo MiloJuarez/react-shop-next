@@ -1,0 +1,62 @@
+@import 'vars';
+
+.ShoppingCart {
+    position: fixed;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: $--white;
+    border-radius: 6px;
+    border: 1px solid $--very-light-pink;
+    overflow: auto;
+}
+.ShoppingCart__title {
+    display: flex;
+}
+.ShoppingCart__title img {
+    transform: rotate(180deg);
+    padding: 0 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.ShoppingCart__title .Title {
+    margin-bottom: 15px;
+}
+.ShoppingCart__container {
+    position: relative;
+    padding-bottom: 200px;
+}
+.ShoppingCart-orderItem--flex {
+    display: grid;
+    margin-bottom: 16px;
+    padding: 0 24px;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: $--text-input-field;
+    border-radius: 8px;
+}
+.ShoppingCart-orderItem__text {
+    font-weight: bold;
+}
+.ShoppingCart-orderItem__text--medium {
+    font-size: $--md;
+}
+.ShoppingCart-orderItem__text--end {
+    text-align: end;
+}
+.ShoppingCart__ca {
+    position: fixed;
+    bottom: 0;
+    width: calc(360px - 48px);
+    padding-top: 8px;
+    background-color: $--white;
+    border-top: 1px solid $--very-light-pink;
+}
+@media (max-width: 640px) {
+    .ShoppingCart {
+        width: 100%;
+    }
+}

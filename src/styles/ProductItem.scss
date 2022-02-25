@@ -1,0 +1,25 @@
+@use "vars";
+
+.ProductItem {
+    display: grid;
+    margin-bottom: 24px;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+}
+.ProductItem__text--light {
+    color: var(--very-light-pink);
+}
+.ProductItem__text--bold {
+    font-size: var(--md);
+    font-weight: bold;
+}
+.ProductItem__figure {
+    margin: 0;
+}
+.ProductItem__figure img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}

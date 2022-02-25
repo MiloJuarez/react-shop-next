@@ -1,0 +1,10 @@
+@use "vars";
+
+.Subtitle {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: var(--md);
+    font-weight: 300;
+    text-align: center;
+    color: var(--very-light-pink);
+}

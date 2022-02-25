@@ -1,0 +1,21 @@
+@use "vars";
+
+.SecondaryButton {
+    width: 100%;
+    height: 50px;
+    font-size: var(--md);
+    font-weight: bold;
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .SecondaryButton {
+        position: fixed;
+        bottom: 20px;
+        width: inherit;
+    }
+}

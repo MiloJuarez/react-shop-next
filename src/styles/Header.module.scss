@@ -1,0 +1,88 @@
+@import 'vars';
+
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin-bottom: 16px;
+    background-color: $--white;
+    border-bottom: 1px solid $--very-light-pink;
+    box-sizing: border-box;
+}
+.Navbar__menu {
+    display: none;
+}
+.Navbar-left__logo {
+    width: 100px;
+}
+.Navbar-left__items,
+.Navbar-right__items {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.Navbar-left {
+    display: flex;
+    margin-left: 12px;
+}
+.Navbar-left__items {
+    margin-left: 12px;
+}
+.Navbar-left__items .Navbar__item,
+.Navbar-right__items .Navbar__item {
+    text-decoration: none;
+    color: $--very-light-pink;
+    border: 1px solid $--white;
+    padding: 8px;
+    border-radius: 8px;
+}
+.Navbar-left__items .Navbar__item:hover,
+.Navbar-right__items .Navbar__item:hover {
+    border: 1px solid $--hospital-green;
+    color: $--hospital-green;
+}
+.Navbar-right__email {
+    margin-right: 12px;
+    color: $--very-light-pink;
+    font-size: $--sm;
+    cursor: pointer;
+}
+.Navbar-right__cart {
+    padding-right: 8px;
+    position: relative;
+    cursor: pointer;
+}
+.Navbar-right__cart div {
+    position: absolute;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    top: -6px;
+    right: -3px;
+    justify-content: center;
+    align-items: center;
+    font-size: $--sm;
+    font-weight: bold;
+    background-color: $--hospital-green;
+    border-radius: 50%;
+}
+@media (max-width: 770px) {
+    .Navbar__menu {
+        display: block;
+    }
+    .Navbar-left__items {
+        display: none;
+    }
+    .Navbar-right__email {
+        display: none;
+    }
+}

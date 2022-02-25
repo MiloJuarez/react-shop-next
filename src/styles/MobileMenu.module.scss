@@ -1,0 +1,53 @@
+@import 'vars';
+
+.MobileMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 24px;
+    background-color: $--white;
+    box-sizing: border-box;
+    overflow: scroll;
+    z-index: 100;
+}
+.MobileMenu__close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    padding: 8px;
+    cursor: pointer;
+}
+.MobileMenu a {
+    text-decoration: none;
+    color: $--black;
+    font-weight: bold;
+}
+.MobileMenu ul {
+    margin: 0;
+    padding: 24px 0 0;
+    list-style: none;
+}
+.MobileMenu ul li {
+    margin-bottom: 24px;
+}
+.MobileMenu .email {
+    font-size: $--sm;
+    font-weight: 300;
+}
+.MobileMenu__categories {
+    border-bottom: 1px solid $--very-light-pink;
+}
+.MobileMenu__categories,
+.MobileMenu__account {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.MobileMenu__profile li:first-child {
+    margin-bottom: 8px;
+}
+.MobileMenu .sign-out {
+    font-size: $--sm;
+    color: $--hospital-green;
+}

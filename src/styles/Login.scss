@@ -1,0 +1,55 @@
+@use "vars";
+
+.Login {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+}
+.Login-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.Login__icon {
+    display: none;
+    width: 150px;
+    margin-bottom: 48px;
+    justify-self: center;
+}
+.Login-form {
+    display: flex;
+    flex-direction: column;
+}
+.Login-form__link {
+    margin-bottom: 54px;
+    font-size: var(--sm);
+    text-align: center;
+    text-decoration: none;
+    color: var(--hospital-green);
+}
+.Login-form__label {
+    margin-bottom: 4px;
+    font-size: var(--sm);
+    font-weight: bold;
+}
+.Login-form__input {
+    height: 30px;
+    margin-bottom: 12px;
+    padding: 6px;
+    font-size: var(--md);
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+}
+.Login-form__input--mb22 {
+    margin-bottom: 22px;
+}
+@media (max-width: 640px) {
+    .Login__icon {
+        display: block;
+    }
+    .Login-container {
+        position: relative;
+    }
+}

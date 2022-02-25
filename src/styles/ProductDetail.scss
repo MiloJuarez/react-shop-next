@@ -1,0 +1,26 @@
+@use "vars";
+
+.ProductDetail {
+    position: absolute;
+    right: 0;
+    width: 360px;
+    padding-bottom: 24px;
+}
+.ProductDetail__close-icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 12px;
+    left: 12px;
+    margin: 0;
+    padding: 12px;
+    border-radius: 50%;
+    background: var(--white);
+    cursor: pointer;
+    z-index: 2;
+}
+@media (max-width: 640px) {
+    .ProductDetail {
+        width: 100%;
+    }
+}
