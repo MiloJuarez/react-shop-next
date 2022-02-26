@@ -5,11 +5,11 @@ import Image from 'next/image';
 const ProductItem = ({ product, children }) => {
     return (
         <article className={styles.ProductItem}>
-            <figure className="ProductItem__figure">
-                <Image src={product.images[0]} alt={product.title} />
+            <figure className={styles.ProductItem__figure}>
+                <Image loader={() => product.images[0]} src={product.images[0]} alt={product.title} className={styles.ProductItem__image} width="70" height="70" />
             </figure>
-            <p className="ProductItem__text--light">{product.title}</p>
-            <p className="ProductItem__text--bold">${product.price}</p>
+            <p className={styles['ProductItem__text--light']}>{product.title}</p>
+            <p className={styles['ProductItem__text--bold']}>${product.price}</p>
             {children}
         </article>
     );

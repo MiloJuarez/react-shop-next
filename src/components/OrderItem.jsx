@@ -1,9 +1,9 @@
-import React from "react";
-import "@styles/OrderItem.scss";
+import React from 'react';
+import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({ order, children }) => {
     return (
-        <article className="OrderItem">
+        <article className={styles.OrderItem}>
             <p>
                 <span>{order.date}</span>
                 <span>{order.total_items} articles</span>

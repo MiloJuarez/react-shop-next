@@ -1,4 +1,4 @@
-@use "vars";
+@use 'vars';
 
 .ProductItem {
     display: grid;
@@ -17,7 +17,7 @@
 .ProductItem__figure {
     margin: 0;
 }
-.ProductItem__figure img {
+.ProductItem__image {
     width: 70px;
     height: 70px;
     border-radius: 20px;

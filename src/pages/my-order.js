@@ -21,7 +21,7 @@ const MyOrder = () => {
 
                     <ProductItem
                         product={{
-                            image: ['https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'],
+                            images: ['https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'],
                             title: 'Bike',
                             price: 60.0,
                         }}
@@ -29,7 +29,7 @@ const MyOrder = () => {
 
                     <ProductItem
                         product={{
-                            image: ['https://images.pexels.com/photos/4922619/pexels-photo-4922619.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'],
+                            images: ['https://images.pexels.com/photos/4922619/pexels-photo-4922619.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'],
                             title: 'Helmet',
                             price: 15.0,
                         }}
@@ -37,7 +37,7 @@ const MyOrder = () => {
 
                     <ProductItem
                         product={{
-                            image: ['https://images.pexels.com/photos/10110754/pexels-photo-10110754.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'],
+                            images: ['https://images.pexels.com/photos/10110754/pexels-photo-10110754.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'],
                             title: 'Biker',
                             price: 40.0,
                         }}
