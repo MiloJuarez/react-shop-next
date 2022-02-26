@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import "@styles/ProductCard.scss";
-import addToCartIcon from "@icons/bt_add_to_cart.svg";
-import addedToCartIcon from "@icons/bt_added_to_cart.svg";
-import AppContext from "@context/AppContext";
+import React, { useContext } from 'react';
+import styles from '@styles/ProductCard.module.scss';
+import addToCartIcon from '@icons/bt_add_to_cart.svg';
+import addedToCartIcon from '@icons/bt_added_to_cart.svg';
+import AppContext from '@context/AppContext';
+import Image from 'next/image';
 
 const ProductCard = ({ product }) => {
     const { addToCart, inCart } = useContext(AppContext);
@@ -12,35 +13,18 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <article className="ProductCard">
-            <img
-                src={product.images[0]}
-                alt={product.title}
-                className="ProductCard__image"
-            />
+        <article className={styles.ProductCard}>
+            <Image loader={() => product.images[0]} src={product.images[0]} alt={product.title} className={styles.ProductCard__image} width="100%" height="100%" layout="responsive" />
             <div className="ProductCard-info">
                 <div>
-                    <p className="ProductCard-info__text ProductCard-info__text--bold">
-                        ${product.price}
-                    </p>
-                    <p className="ProductCard-info__text ProductCard-info__text--gray">
-                        {product.title}
-                    </p>
+                    <p className={(styles['ProductCard-info__text'], styles['ProductCard-info__text--bold'])}>${product.price}</p>
+                    <p className={(styles['ProductCard-info__text'], styles['ProductCard-info__text--gray'])}>{product.title}</p>
                 </div>
-                <figure className="ProductCard-info__figure">
+                <figure className={styles['ProductCard-info__figure']}>
                     {inCart(product) == false ? (
-                        <img
-                            src={addToCartIcon}
-                            alt="Add to cart"
-                            className="ProductCard-info__figure--icon-add"
-                            onClick={() => handleClick(product)}
-                        />
+                        <Image src={addToCartIcon} alt="Add to cart" className={styles['ProductCard-info__figure--icon-add']} onClick={() => handleClick(product)} />
                     ) : (
-                        <img
-                            src={addedToCartIcon}
-                            alt="Added to cart"
-                            className="ProductCard-info__figure--icon-added"
-                        />
+                        <Image src={addedToCartIcon} alt="Added to cart" className={styles['ProductCard-info__figure--icon-added']} />
                     )}
                 </figure>
             </div>
