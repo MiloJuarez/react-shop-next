@@ -1,8 +1,11 @@
-import React, { useRef } from "react";
-import "@styles/Login.scss";
-import PrimaryInputSubmit from "@components/PrimaryInputSubmit";
-import SecondaryButton from "@components/SecondaryButton";
-import logo from "@logos/logo_yard_sale.svg";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useRef } from 'react';
+import PrimaryInputSubmit from '@components/PrimaryInputSubmit';
+import SecondaryButton from '@components/SecondaryButton';
+import logo from '@logos/logo_yard_sale.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@styles/Login.module.scss';
 
 const Login = () => {
     const form = useRef(null);
@@ -12,49 +15,36 @@ const Login = () => {
 
         const formData = new FormData(form.current);
         const data = {
-            username: formData.get("email"),
-            password: formData.get("password"),
+            username: formData.get('email'),
+            password: formData.get('password'),
         };
         console.log(data);
     };
 
     return (
-        <div className="Login">
-            <div className="Login-container">
-                <img src={logo} alt="Logo" className="Login__icon" />
+        <div className={styles.Login}>
+            <div className={styles['Login-container']}>
+                <Image src={logo} alt="Logo" className="Login__icon" />
 
-                <form action="/" className="Login-form" ref={form}>
-                    <label htmlFor="email" className="Login-form__label">
+                <form action="/" className={styles['Login-form']} ref={form}>
+                    <label htmlFor="email" className={styles['Login-form__label']}>
                         Email address
                     </label>
-                    <input
-                        type="email"
-                        name="email"
-                        className="Login-form__input Login-form__input--mb22"
-                        placeholder="camilayokoo@gmail.com"
-                    />
+                    <input type="email" name="email" className={(styles['Login-form__input'], styles['Login-form__input--mb22'])} placeholder="camilayokoo@gmail.com" />
 
-                    <label htmlFor="password" className="Login-form__label">
+                    <label htmlFor="password" className={styles['Login-form__label']}>
                         Password
                     </label>
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="*********"
-                        className="Login-form__input Login-form__input--mb22"
-                    />
+                    <input type="password" name="password" placeholder="*********" className={(styles['Login-form__input'], styles['Login-form__input--mb22'])} />
 
-                    <PrimaryInputSubmit
-                        value={"Log in"}
-                        handle={handleSubmit}
-                    />
+                    <PrimaryInputSubmit value={'Log in'} handle={handleSubmit} />
 
-                    <a href="/" className="Login-form__link">
-                        Forgot my password
-                    </a>
+                    <Link href="/">
+                        <a className={styles['Login-form__link']}>Forgot my password</a>
+                    </Link>
                 </form>
 
-                <SecondaryButton label={"Sign up"} />
+                <SecondaryButton label={'Sign up'} />
             </div>
         </div>
     );
