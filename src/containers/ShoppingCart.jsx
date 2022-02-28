@@ -41,7 +41,7 @@ const ShoppingCart = ({ onTapBack }) => {
                         <p className={(styles['ShoppingCart-orderItem__text'], styles['ShoppingCart-orderItem__text--end'])}>${sumTotal()}</p>
                     </article>
 
-                    <PrimaryButton label={'Checkout'} />
+                    <PrimaryButton label={'Checkout'} link={'/checkout'} />
                 </div>
             </div>
         </aside>
