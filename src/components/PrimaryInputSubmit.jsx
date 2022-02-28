@@ -1,9 +1,9 @@
-import React from "react";
-import "@styles/PrimaryInputSubmit.scss";
+import React from 'react';
+import styles from '@styles/PrimaryInputSubmit.module.scss';
 
 const PrimaryInputSubmit = ({ value, handle }) => {
     return (
-        <button type="submit" className="PrimaryInputSubmit" onClick={handle}>
+        <button type="submit" className={styles.PrimaryInputSubmit} onClick={handle}>
             {value}
         </button>
     );

@@ -1,60 +1,33 @@
-import React from "react";
-import "@styles/CreateAccount.scss";
-import PrimaryInputSubmit from "@components/PrimaryInputSubmit";
-import Title from "@components/Title";
+import React from 'react';
+import PrimaryInputSubmit from '@components/PrimaryInputSubmit';
+import Title from '@components/Title';
+import styles from '@styles/CreateAccount.module.scss';
 
 const CreateAccount = () => {
     return (
-        <div className="CreateAccount">
-            <div className="CreateAccount-container">
-                <Title title={"Create account"} />
+        <div className={styles.CreateAccount}>
+            <div className={styles['CreateAccount-container']}>
+                <Title title={'Create account'} />
 
-                <form action="/" className="CreateAccount-form">
+                <form action="/" className={styles['CreateAccount-form']}>
                     <div>
-                        <label
-                            htmlFor="name"
-                            className="CreateAccount-form__label"
-                        >
+                        <label htmlFor="name" className={styles['CreateAccount-form__label']}>
                             Name
                         </label>
-                        <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Milo"
-                            className="CreateAccount-form__input CreateAccount-form__input--mb22"
-                        />
+                        <input type="text" name="name" id="name" placeholder="Milo" className={(styles['CreateAccount-form__input'], styles[' CreateAccount-form__input--mb22'])} />
 
-                        <label
-                            htmlFor="email"
-                            className="CreateAccount-form__label"
-                        >
+                        <label htmlFor="email" className={styles['CreateAccount-form__label']}>
                             Email address
                         </label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="platzi@example.com"
-                            className="CreateAccount-form__input CreateAccount-form__input--mb22"
-                        />
+                        <input type="email" name="email" id="email" placeholder="platzi@example.com" className={(styles['CreateAccount-form__input'], styles[' CreateAccount-form__input--mb22'])} />
 
-                        <label
-                            htmlFor="password"
-                            className="CreateAccount-form__label"
-                        >
+                        <label htmlFor="password" className={styles['CreateAccount-form__label']}>
                             Password
                         </label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            placeholder="*********"
-                            className="CreateAccount-form__input CreateAccount-form__input--mb22"
-                        />
+                        <input type="password" name="password" id="password" placeholder="*********" className={(styles['CreateAccount-form__input'], styles[' CreateAccount-form__input--mb22'])} />
                     </div>
 
-                    <PrimaryInputSubmit value={"Create"} />
+                    <PrimaryInputSubmit value={'Create'} />
                 </form>
             </div>
         </div>
