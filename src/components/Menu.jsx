@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import Link from 'next/link';
 import styles from '@styles/Menu.module.scss';
 
 const Menu = () => {
@@ -6,13 +8,19 @@ const Menu = () => {
         <div className={styles.Menu}>
             <ul>
                 <li>
-                    <a href="/">My orders</a>
+                    <Link href="/">
+                        <a>My orders</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">My account</a>
+                    <Link href="/">
+                        <a>My account</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Sign up</a>
+                    <Link href="/">
+                        <a>Sign up</a>
+                    </Link>
                 </li>
             </ul>
         </div>
