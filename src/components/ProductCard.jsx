@@ -12,10 +12,14 @@ const ProductCard = ({ product }) => {
         addToCart(item);
     };
 
+    const customLoader = ({ src, width, quality }) => {
+        return `${src}&w=${width}&q=${quality || 75}`;
+    };
+
     return (
         <article className={styles.ProductCard}>
-            <Image loader={() => product.images[0]} src={product.images[0]} alt={product.title} className={styles.ProductCard__image} width="100%" height="100%" layout="responsive" />
-            <div className="ProductCard-info">
+            <Image loader={customLoader} src={product?.images[0]} alt={product?.title} className={styles.ProductCard__image} width="100" height="100" layout="responsive" />
+            <div className={styles['ProductCard-info']}>
                 <div>
                     <p className={(styles['ProductCard-info__text'], styles['ProductCard-info__text--bold'])}>${product.price}</p>
                     <p className={(styles['ProductCard-info__text'], styles['ProductCard-info__text--gray'])}>{product.title}</p>

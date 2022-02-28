@@ -5,12 +5,13 @@ const useGetProducts = (API) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        async function fetchData() {
+        async function getProducts() {
             const response = await axios(API);
             setProducts(response.data);
         }
-        fetchData();
-    }, []);
+
+        getProducts();
+    });
 
     return products;
 };

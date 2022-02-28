@@ -17,8 +17,8 @@
 }
 .ShoppingCart__title img {
     transform: rotate(180deg);
-    padding: 0 8px;
-    margin-right: 8px;
+    padding: 0 8px !important;
+    margin-right: 8px !important;
     cursor: pointer;
 }
 .ShoppingCart__title .Title {
@@ -51,12 +51,15 @@
     position: fixed;
     bottom: 0;
     width: calc(360px - 48px);
-    padding-top: 8px;
+    padding-top: 8px 16px 0 16px;
     background-color: $--white;
     border-top: 1px solid $--very-light-pink;
 }
 @media (max-width: 640px) {
     .ShoppingCart {
         width: 100%;
+    }
+    .ShoppingCart__ca {
+        width: calc(100% - 48px);
     }
 }

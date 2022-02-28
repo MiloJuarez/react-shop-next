@@ -30,7 +30,7 @@ const Header = () => {
             </div>
             {toggleMM && <MobileMenu handleClick={() => handleToggleMM()} />}
             <div className={styles['Navbar-left']}>
-                <Image src={logo} alt="logo" className={styles['Navbar-left__logo']} />
+                <Image src={logo} alt="logo" className={styles['Navbar-left__logo']} priority={true} />
                 <ul className={styles['Navbar-left__items']}>
                     <li>
                         <a href="/" className={styles.Navbar__item}>

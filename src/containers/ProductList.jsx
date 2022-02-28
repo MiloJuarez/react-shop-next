@@ -10,9 +10,11 @@ const ProductList = () => {
     return (
         <section className={styles['ProductList-container']}>
             <div className={styles['ProductList-cards']}>
-                {products.map((item) => (
-                    <ProductCard product={item} key={item.id} />
-                ))}
+                {products.map((item) => {
+                    if (item.images.length > 0 && item.images[0] !== '') {
+                        return <ProductCard product={item} key={item.id} />;
+                    }
+                })}
             </div>
         </section>
     );

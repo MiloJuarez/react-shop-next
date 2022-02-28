@@ -6,6 +6,7 @@ import PrimaryButton from '@components/PrimaryButton';
 import ProductItem from '@components/ProductItem';
 import Title from '@components/Title';
 import arrowBack from '@icons/arrow.svg';
+import Image from 'next/image';
 
 const ShoppingCart = ({ onTapBack }) => {
     const { state, removeFromCart } = useContext(AppContext);
@@ -18,24 +19,24 @@ const ShoppingCart = ({ onTapBack }) => {
 
     return (
         <aside className={styles.ShoppingCart}>
-            <div className="ShoppingCart__title">
-                <img src={arrowBack} alt="arrow" onClick={onTapBack} />
+            <div className={styles.ShoppingCart__title}>
+                <Image src={arrowBack} alt="arrow" onClick={onTapBack} width="4" height="4" />
                 <Title title={'My Shopping Cart'} />
             </div>
 
-            <div className="ShoppingCart__container">
+            <div className={styles.ShoppingCart__container}>
                 {state.cart.map((product) => (
                     <ProductItem product={product} key={`productItem-${product.id}`}>
                         <ButtonRemoveProduct handleClick={() => removeFromCart(product)} />
                     </ProductItem>
                 ))}
 
-                <div className="ShoppingCart__ca">
-                    <article className="ShoppingCart-orderItem--flex">
-                        <p className="ShoppingCart-orderItem__text">
-                            <span className="ShoppingCart-orderItem__text--medium">Total</span>
+                <div className={styles.ShoppingCart__ca}>
+                    <article className={styles['ShoppingCart-orderItem--flex']}>
+                        <p className={styles['ShoppingCart-orderItem__text']}>
+                            <span className={styles['ShoppingCart-orderItem__text--medium']}>Total</span>
                         </p>
-                        <p className="ShoppingCart-orderItem__text ShoppingCart-orderItem__text--end">${sumTotal()}</p>
+                        <p className={(styles['ShoppingCart-orderItem__text'], styles['ShoppingCart-orderItem__text--end'])}>${sumTotal()}</p>
                     </article>
 
                     <PrimaryButton label={'Checkout'} />
