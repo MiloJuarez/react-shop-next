@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useContext } from 'react';
 import Menu from '@components/Menu';
 import AppContext from '@context/AppContext';
@@ -6,8 +7,9 @@ import logo from '@logos/logo_yard_sale.svg';
 import shoppingCartIcon from '@icons/icon_shopping_cart.svg';
 import ShoppingCart from '@containers/ShoppingCart';
 import MobileMenu from '@components/MobileMenu';
-import styles from '@styles/Header.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@styles/Header.module.scss';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
@@ -33,34 +35,34 @@ const Header = () => {
                 <Image src={logo} alt="logo" className={styles['Navbar-left__logo']} priority={true} />
                 <ul className={styles['Navbar-left__items']}>
                     <li>
-                        <a href="/" className={styles.Navbar__item}>
-                            All
-                        </a>
+                        <Link href="/">
+                            <a className={styles.Navbar__item}>All</a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/" className={styles.Navbar__item}>
-                            Clothes
-                        </a>
+                        <Link href="/">
+                            <a className={styles.Navbar__item}>Clothes</a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/" className={styles.Navbar__item}>
-                            Electronics
-                        </a>
+                        <Link href="/">
+                            <a className={styles.Navbar__item}>Electronics</a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/" className={styles.Navbar__item}>
-                            Furnitures
-                        </a>
+                        <Link href="/">
+                            <a className={styles.Navbar__item}>Furnitures</a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/" className={styles.Navbar__item}>
-                            Toys
-                        </a>
+                        <Link href="/">
+                            <a className={styles.Navbar__item}>Toys</a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/" className={styles.Navbar__item}>
-                            Others
-                        </a>
+                        <Link href="/">
+                            <a className={styles.Navbar__item}>Others</a>
+                        </Link>
                     </li>
                 </ul>
             </div>
