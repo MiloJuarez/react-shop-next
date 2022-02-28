@@ -1,6 +1,6 @@
-@use "vars";
+@import 'vars';
 
 .Title {
-    font-size: var(--lg);
+    font-size: $--lg;
     margin-bottom: 40px;
 }
