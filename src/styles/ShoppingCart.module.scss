@@ -14,11 +14,15 @@
 }
 .ShoppingCart__title {
     display: flex;
+    align-items: center;
+    h1 {
+        margin: 0;
+    }
 }
-.ShoppingCart__title img {
+.ShoppingCart__back {
     transform: rotate(180deg);
-    padding: 0 8px !important;
-    margin-right: 8px !important;
+    padding: 8px;
+    margin-right: 8px;
     cursor: pointer;
 }
 .ShoppingCart__title .Title {

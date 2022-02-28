@@ -1,12 +1,15 @@
 import React from 'react';
-import styles from '@styles/MobileMenu.module.scss';
 import closeIcon from '@icons/icon_close.png';
+import Image from 'next/image';
+import styles from '@styles/MobileMenu.module.scss';
 
 const MobileMenu = ({ handleClick }) => {
     return (
         <div className={styles.MobileMenu}>
-            <img className="MobileMenu__close" src={closeIcon} alt="close" onClick={handleClick} />
-            <ul className="MobileMenu__categories">
+            <div className={styles.MobileMenu__close}>
+                <Image src={closeIcon} alt="close" onClick={handleClick} />
+            </div>
+            <ul className={styles.MobileMenu__categories}>
                 <li>
                     <a href="/">CATEGORIES</a>
                 </li>
@@ -30,7 +33,7 @@ const MobileMenu = ({ handleClick }) => {
                 </li>
             </ul>
 
-            <ul className="MobileMenu__account">
+            <ul className={styles.MobileMenu__account}>
                 <li>
                     <a href="/">My orders</a>
                 </li>
@@ -39,14 +42,14 @@ const MobileMenu = ({ handleClick }) => {
                 </li>
             </ul>
 
-            <ul className="MobileMenu__profile">
+            <ul className={styles.MobileMenu__profile}>
                 <li>
-                    <a href="/" className="email">
+                    <a href="/" className={styles.email}>
                         platzi@example.com
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="sign-out">
+                    <a href="/" className={styles['sign-out']}>
                         Sign up
                     </a>
                 </li>

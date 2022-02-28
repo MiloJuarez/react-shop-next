@@ -20,7 +20,9 @@ const ShoppingCart = ({ onTapBack }) => {
     return (
         <aside className={styles.ShoppingCart}>
             <div className={styles.ShoppingCart__title}>
-                <Image src={arrowBack} alt="arrow" onClick={onTapBack} width="4" height="4" />
+                <div className={styles.ShoppingCart__back}>
+                    <Image src={arrowBack} alt="arrow" onClick={onTapBack} />
+                </div>
                 <Title title={'My Shopping Cart'} />
             </div>
 
