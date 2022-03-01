@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import closeIcon from '@icons/icon_close.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@styles/MobileMenu.module.scss';
 
 const MobileMenu = ({ handleClick }) => {
@@ -11,47 +13,65 @@ const MobileMenu = ({ handleClick }) => {
             </div>
             <ul className={styles.MobileMenu__categories}>
                 <li>
-                    <a href="/">CATEGORIES</a>
+                    <Link href="/" passHref>
+                        <a>CATEGORIES</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">All</a>
+                    <Link href="/" passHref>
+                        <a>All</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Clothes</a>
+                    <Link href="/" passHref>
+                        <a>Clothes</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Electronics</a>
+                    <Link href="/" passHref>
+                        <a>Electronics</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Furniture</a>
+                    <Link href="/" passHref>
+                        <a>Furniture</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Toys</a>
+                    <Link href="/" passHref>
+                        <a>Toys</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Others</a>
+                    <Link href="/" passHref>
+                        <a>Others</a>
+                    </Link>
                 </li>
             </ul>
 
             <ul className={styles.MobileMenu__account}>
                 <li>
-                    <a href="/">My orders</a>
+                    <Link href="/" passHref>
+                        <a>My orders</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">My account</a>
+                    <Link href="/" passHref>
+                        <a>My account</a>
+                    </Link>
                 </li>
             </ul>
 
             <ul className={styles.MobileMenu__profile}>
                 <li>
-                    <a href="/" className={styles.email}>
-                        platzi@example.com
-                    </a>
+                    <Link href="/" passHref>
+                        <a className={styles.email}>platzi@example.com</a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/" className={styles['sign-out']}>
-                        Sign up
-                    </a>
+                    <Link href="/" passHref>
+                        <a className={styles['sign-out']}>Sign up</a>
+                    </Link>
                 </li>
             </ul>
         </div>
