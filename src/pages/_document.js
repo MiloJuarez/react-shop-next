@@ -5,7 +5,6 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <title>React Shop</title>
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEVQMVFQ7"></script>
                     <script
                         dangerouslySetInnerHTML={{
