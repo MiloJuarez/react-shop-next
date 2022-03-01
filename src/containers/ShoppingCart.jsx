@@ -15,7 +15,7 @@ const ShoppingCart = ({ onTapBack }) => {
     return (
         <>
             <Head>
-                <title>Checkout</title>
+                <title>Shopping Cart</title>
             </Head>
             <aside className={styles.ShoppingCart}>
                 <div className={styles.ShoppingCart__title}>
@@ -40,7 +40,7 @@ const ShoppingCart = ({ onTapBack }) => {
                             <p className={(styles['ShoppingCart-orderItem__text'], styles['ShoppingCart-orderItem__text--end'])}>${sumTotal()}</p>
                         </article>
 
-                        <PrimaryButton label={'Checkout'} link={'/checkout'} />
+                        {state.cart.length > 0 && <PrimaryButton label={'Checkout'} link={'/checkout'} />}
                     </div>
                 </div>
             </aside>
