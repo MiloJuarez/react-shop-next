@@ -10,13 +10,7 @@ import arrowBack from '@icons/arrow.svg';
 import Image from 'next/image';
 
 const ShoppingCart = ({ onTapBack }) => {
-    const { state, removeFromCart } = useContext(AppContext);
-
-    const sumTotal = () => {
-        const reducer = (acumulador, currentValue) => acumulador + currentValue.price;
-        const sum = state.cart.reduce(reducer, 0);
-        return sum;
-    };
+    const { state, removeFromCart, sumTotal } = useContext(AppContext);
 
     return (
         <>

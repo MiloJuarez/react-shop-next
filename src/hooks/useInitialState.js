@@ -29,11 +29,18 @@ const useInitialState = () => {
         return false;
     };
 
+    const sumTotal = () => {
+        const reducer = (acumulador, currentValue) => acumulador + currentValue.price;
+        const sum = state.cart.reduce(reducer, 0);
+        return sum;
+    };
+
     return {
         state,
         addToCart,
         removeFromCart,
         inCart,
+        sumTotal,
     };
 };
 
