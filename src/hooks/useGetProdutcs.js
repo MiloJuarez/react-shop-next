@@ -11,7 +11,7 @@ const useGetProducts = (API) => {
         }
 
         getProducts();
-    });
+    }, [API]);
 
     return products;
 };
