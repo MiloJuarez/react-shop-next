@@ -1,8 +1,9 @@
-import React from "react";
-import arrow from "@icons/arrow.svg";
+import React from 'react';
+import arrow from '@icons/arrow.svg';
+import Image from 'next/image';
 
 const ButtonOrderDetails = () => {
-    return <img src={arrow} alt="Detailes" />;
+    return <Image src={arrow} alt="Detailes" />;
 };
 
 export default ButtonOrderDetails;
